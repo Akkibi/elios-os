@@ -1,0 +1,13 @@
+{
+    "folders": [
+      {
+        "name": "Documents",
+        "content": ["Document1.txt", "Document2.txt"]
+      },
+      {
+        "name": "Apps",
+        "content": ["App1", "App2"]
+      }
+    ]
+  }
+  
