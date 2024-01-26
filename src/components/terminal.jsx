@@ -8,9 +8,9 @@ const Terminal = () => {
                 <p>Welcome to the terminal ! <br /> You are currently connected to EU8. Explore, create, and manage your projects with care.</p>
 
 
-                <div className="flex" >
-                    <p>@EliOsTem </p>
-                    <input className="ml-4 h-1/2 w-full text-black p-3 focus:outline-none focus:border-pink-500 focus:ring-pink-500 focus:ring-4 " type="text" name="" id="" />
+                <div className="flex items-center gap-2" >
+                    <p>@walt </p>
+                    <input className="h-1/2 w-full text-black p-3 focus:outline-none focus:border-pink-500 focus:ring-pink-500 focus:ring-4 bg-transparent border-l-2 border-white" type="text" name="" id="" />
                 </div>
             </div>
 
