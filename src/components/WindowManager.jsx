@@ -6,7 +6,7 @@ const WindowManager = () => {
 
   return (
     <div className="fixed inset-0 w-full h-full">
-      
+      <h1>Welcome</h1>
     </div>
   );
 };
