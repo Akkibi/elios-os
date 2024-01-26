@@ -1,27 +1,11 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-
+import WindowManager from "./components/WindowManager";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-    <p>Bienvenue sur</p>
-        <h1 className="m-10 text-8xl font-bold underline">Elios OS</h1>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Zeparti
-      </p>
+      <h1 className="text-3xl font-bold w-full text-center">Welcome</h1>
+      <WindowManager />
     </>
   );
 }
