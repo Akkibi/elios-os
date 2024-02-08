@@ -62,12 +62,12 @@ const Desktop = () => {
 
   return (
     <>
-      <section className="fixed flex flex-row flex-wrap gap-5 p-16 inset-0 w-full h-full">
+      <section className="fixed flex flex-row flex-wrap gap-7 p-16 inset-0 w-full h-full">
         {folderStructure.bureau.map(item => (
-          <button key={item.name} onClick={() => setNewWindow(item.name, item.type, item.content)} className="flex flex-col max-h-32 min-w-16">
+          <button key={item.name} onClick={() => setNewWindow(item.name, item.type, item.content)} className="flex flex-col max-h-32 w-20">
             <div className="w-full h-full  min-h-16 bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${item.icon})` }}>
             </div>
-            <p className='text-center w-full'>{item.name}</p>
+            <p className='text-center uppercase font-urbanist w-full'>{item.name}</p>
           </button>
         ))}
       </section >
@@ -83,28 +83,38 @@ const Desktop = () => {
             key={name}
           >
             <div className="absolute z-10 min-w-96 min-h-96 flex flex-wrap flex-col gap-3 p-2 bg-[rgba(0,0,0,0.8)]
-          backdrop-blur-lg translate-x-1/2 translate-y-1/2 rounded-md"
+          backdrop-blur-lg translate-x-1/2 translate-y-1/2 rounded-md bg-[#070A11] border border-solid  border-[#B7FFF2] rounded-br-lg"
               style={{
                 width: windowSizes[name]?.width || 'auto',
                 height: windowSizes[name]?.height || 'auto',
               }}
               id={name}
             >
-              {/* <div className="h-8 w-8 bg-white rounded-full absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-black text-center leading-8" draggable="true" onDrag={(e) => handleResize(name,e)}>↘</div> */}
-              <div className='handle h-fit flex justify-between w-full bg-black text-white border-[#646cff] border-solid border-2 rounded-md px-5 py-2 text-2xl align-middle items-center' key={name}
-              >
-                <span>{name}</span>
-                <span className='text-center leading-6 opacity-50 rotate-90'>|||</span>
-                <span className=' select-none text-sm h-6 w-6 rounded-full bg-red-500 text-center leading-6 text-black font-black' onClick={() => closeWindow(name, this)}>X</span>
+              <div className='absolute top-0 right-0 flex m-1 justify-center items-center flex-row'>
+                <span className=' cursor-pointer select-none  text-xl h-6 w-6 rounded-full  text-center leading-6 text-[#B7FFF2] ' > ▢</span>
+                <span className=' cursor-pointer select-none text-xl h-6 w-6 rounded-full  text-center leading-6 text-red-500 ' onClick={() => closeWindow(name, this)}> X</span>
               </div>
-              <div className="w-full flex gap-3 p-5 relative flex-1 border-[#646cff] border-2 rounded-md h-full overflow-hidden"
+              {/* <div className="h-8 w-8 bg-white rounded-full absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-black text-center leading-8" draggable="true" onDrag={(e) => handleResize(name,e)}>↘</div> */}
+              <div>
+                <div className=" absolute bg-[#B7FFF2]  bg-opacity-20 w-2 h-full  border-r  border-r-solid  border-[#B7FFF2] border-opacity-20 left-0 top-0 rounded-l-sm"></div>
+
+              </div>
+              <div className='handle h-fit flex justify-between w-full  flex-col text-white rounded-md px-5  text-2xl align-middle items-center' key={name}
+              >
+                <div className='flex justify-between w-full flex-row  font-extrabold uppercase font-urbanist'> <span className='ml-2'>{name}</span>  </div>
+
+                {/* <span className='text-center leading-6 opacity-50 rotate-90'>|||</span> */}
+
+                <div className='mt-5 w-full ml-2 h-0 border-b  border-b-solid  border-[#B7FFF2] border-opacity-20  '></div>
+              </div>
+              <div className="w-full flex gap-3 p-5 relative flex-1  rounded-md h-full overflow-hidden"
                 onClick={() => { bringWindowToTop(name) }}
               >
                 {type === 'folder' && content.map(item => (
-                  <button key={item.name} onClick={() => setOpenWindows([...openWindows, { name: item.name, type: item.type, content: item.content }])} className="flex flex-col max-h-32 max-w-16">
-                    <div className="w-full h-full  min-h-16 bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${item.icon})` }}>
+                  <button key={item.name} onClick={() => setOpenWindows([...openWindows, { name: item.name, type: item.type, content: item.content }])} className="flex flex-col max-h-32 w-24 gap-2  justify-center items-center">
+                    <div className="  w-10/12 h-full  min-h-16 bg-center bg-contain bg-no-repeat px-2" style={{ backgroundImage: `url(${item.icon})` }}>
                     </div>
-                    <p className='text-center w-full'>{item.name}</p>
+                    <p className='text-center w-full uppercase font-urbanist'>{item.name}</p>
                   </button>
                 ))}
                 {type === 'app' && renderAppContent(content[0])}
