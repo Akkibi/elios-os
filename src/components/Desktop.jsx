@@ -29,7 +29,7 @@ const Desktop = () => {
 //   }
 
   const renderAppContent = (appName) => {
-    switch (appName) {
+           switch (appName) {
       case 'terminal':
         return <Terminal />;
         case 'calculator':
@@ -61,9 +61,9 @@ const Desktop = () => {
           
   return (
     <>
-      <section className="fixed flex flex-col flex-wrap gap-3 p-5 inset-0 w-full h-full">
+      <section className="fixed flex flex-col flex-wrap gap-3 p-20 inset-0 w-full h-full bg-transparent">
         {folderStructure.bureau.map(item => (
-          <button key={item.name} onClick={() => setNewWindow(item.name, item.type, item.content)} className="flex flex-col max-h-32 max-w-32">
+          <button key={item.name} onClick={() => setNewWindow(item.name, item.type, item.content)} className="flex flex-col max-h-32 max-w-32 border border-solid">
             <div className="w-20 h-20 bg-black rounded-md">
               {item.type === 'folder' ? 'dossier' : item.type === 'app' ? 'app' : ''}
             </div>
