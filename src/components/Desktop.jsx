@@ -92,7 +92,7 @@ const Desktop = () => {
             >
               <div className='absolute top-0 right-0 flex m-1 justify-center items-center flex-row'>
                 <span className=' cursor-pointer select-none  text-xl h-6 w-6 rounded-full  text-center leading-6 text-[#B7FFF2] ' > ▢</span>
-                <span className=' cursor-pointer select-none text-xl h-6 w-6 rounded-full  text-center leading-6 text-red-500 ' onClick={() => closeWindow(name, this)}> X</span>
+                <span className=' cursor-pointer select-none text-xl h-6 w-6 rounded-full  text-center leading-6 text-red ' onClick={() => closeWindow(name, this)}> X</span>
               </div>
               {/* <div className="h-8 w-8 bg-white rounded-full absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 text-black text-center leading-8" draggable="true" onDrag={(e) => handleResize(name,e)}>↘</div> */}
               <div>
