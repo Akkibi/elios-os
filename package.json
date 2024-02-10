@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6"
@@ -31,7 +32,7 @@
   },
   "prettier": {
     "trailingComma": "es5",
-    "tabWidth": 2,
+    "tabWidth": 3,
     "semi": false,
     "singleQuote": true,
     "plugins": [
