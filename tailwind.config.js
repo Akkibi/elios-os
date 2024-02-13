@@ -9,15 +9,31 @@ export default {
         urbanist: ['Urbanist', 'sans-serif']
       },
       dropShadow: {
-        'sm': '0px 0px 53.33333206176758px rgba(0.7176470756530762,1,0.9490196108818054,0.12999999523162842)',
-        
-      }
+        'sm': '0px 0px 1.5rem rgba(183, 255, 242, 0.3)',
+        "md": '0px 0px 1rem rgba(183, 255, 242, 0.3)',
+        'yel': '0px 0px 1rem rgba(255, 217, 73, 0.5)',
+      },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+        'spin-slow-2': 'spin 7s linear infinite',
+        'levels': 'levels 5s ease-in-out infinite',
+        'levels-2': 'levels 15s ease-in-out infinite'
+      },
+      keyframes: {
+        levels: {
+          '0%, 100%': { height: '20%' },
+          '40%': { height: '80%' },
+          '60%': { height: '60%' }
+          
+        }
+      },
     },
     colors: {
       'white': '#ffffff',
       'midnight': '#05080D',
       'blue': '#B7FFF2',
       'red': '#FF0000',
+      'yellow': "#FFEB9D",
       transparent: 'transparent',
       current: 'currentColor'
     },
