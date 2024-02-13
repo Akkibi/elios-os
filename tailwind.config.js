@@ -16,8 +16,7 @@ export default {
       animation: {
         'spin-slow': 'spin 4s linear infinite',
         'spin-slow-2': 'spin 7s linear infinite',
-        'levels': 'levels 5s ease-in-out infinite',
-        'levels-2': 'levels 15s ease-in-out infinite'
+        'levels': 'levels 5s ease-in-out infinite'
       },
       keyframes: {
         levels: {
