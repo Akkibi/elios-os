@@ -11,6 +11,7 @@ export default {
       dropShadow: {
         'sm': '0px 0px 1.5rem rgba(183, 255, 242, 0.3)',
         "md": '0px 0px 1rem rgba(183, 255, 242, 0.3)',
+        "txt": '0px 0px .2em rgba(183, 255, 242, 0.3)',
         'yel': '0px 0px 1rem rgba(255, 217, 73, 0.5)',
       },
       animation: {
@@ -23,7 +24,6 @@ export default {
           '0%, 100%': { height: '20%' },
           '40%': { height: '80%' },
           '60%': { height: '60%' }
-          
         }
       },
     },

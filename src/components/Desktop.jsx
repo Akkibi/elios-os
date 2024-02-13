@@ -64,10 +64,10 @@ const Desktop = () => {
     <>
       <section className="fixed flex flex-row flex-wrap gap-7 p-16 inset-0 w-full h-full">
         {folderStructure.bureau.map(item => (
-          <button key={item.name} onClick={() => setNewWindow(item.name, item.type, item.content)} className="flex flex-col max-h-32 w-20">
-            <div className="w-full h-full  min-h-16 bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${item.icon})` }}>
+          <button key={item.name} onClick={() => setNewWindow(item.name, item.type, item.content)} className="flex flex-col max-h-32">
+            <div className="w-20 h-full min-h-16 bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${item.icon})` }}>
             </div>
-            <p className='text-center uppercase font-urbanist w-full'>{item.name}</p>
+            <p className='text-center uppercase font-urbanist w-full tracking-[.1em] drop-shadow-txt'>{item.name}</p>
           </button>
         ))}
       </section >
@@ -101,7 +101,7 @@ const Desktop = () => {
               </div>
               <div className='handle h-fit flex justify-between w-full  flex-col text-white rounded-md px-5  text-2xl align-middle items-center' key={name}
               >
-                <div className='flex justify-between w-full flex-row  font-extrabold uppercase font-urbanist'> <span className='ml-2'>{name}</span>  </div>
+                <div className='flex justify-between w-full flex-row  font-extrabold uppercase font-urbanist'> <span className='ml-2 tracking-[.2em] drop-shadow-txt'>{name}</span>  </div>
 
                 {/* <span className='text-center leading-6 opacity-50 rotate-90'>|||</span> */}
 
@@ -111,10 +111,10 @@ const Desktop = () => {
                 onClick={() => { bringWindowToTop(name) }}
               >
                 {type === 'folder' && content.map(item => (
-                  <button key={item.name} onClick={() => setOpenWindows([...openWindows, { name: item.name, type: item.type, content: item.content }])} className="flex flex-col max-h-32 w-24 gap-2  justify-center items-center">
-                    <div className="  w-10/12 h-full  min-h-16 bg-center bg-contain bg-no-repeat px-2" style={{ backgroundImage: `url(${item.icon})` }}>
+                  <button key={item.name} onClick={() => setOpenWindows([...openWindows, { name: item.name, type: item.type, content: item.content }])} className="flex flex-col max-h-32 gap-2 justify-center items-center">
+                    <div className="w-20 h-full min-h-16 bg-center bg-contain bg-no-repeat px-2" style={{ backgroundImage: `url(${item.icon})` }}>
                     </div>
-                    <p className='text-center w-full uppercase font-urbanist'>{item.name}</p>
+                    <p className='text-center w-full uppercase font-urbanist tracking-[.1em] drop-shadow-txt'>{item.name}</p>
                   </button>
                 ))}
                 {type === 'app' && renderAppContent(content[0])}
