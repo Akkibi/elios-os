@@ -45,8 +45,10 @@ const Desktop = () => {
   };
 
   const bringWindowToTop = (name) => {
-    const updatedWindows = openWindows.filter(windowObj => windowObj.name !== name);
-    setOpenWindows([...updatedWindows, openWindows.find(windowObj => windowObj.name === name)]);
+    if (openWindows[openWindows.length-1].name !== name) {
+      const updatedWindows = openWindows.filter(windowObj => windowObj.name !== name);
+      setOpenWindows([...updatedWindows, openWindows.find(windowObj => windowObj.name === name)]);
+    }
   };
 
   const handleResize = (name, e) => {
