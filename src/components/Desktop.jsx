@@ -86,7 +86,7 @@ const Desktop = () => {
               key={name}
             >
               <div className="absolute z-10 min-w-96 min-h-96 flex flex-wrap flex-col gap-3 p-2 bg-[rgba(0,0,0,0.7)]
-            backdrop-blur-lg translate-x-1/2 translate-y-1/2 rounded-md bg-[#070A11] border border-solid  border-blue rounded-br-lg"
+            backdrop-blur-xl translate-x-1/2 translate-y-1/2 rounded-md bg-[#070A11] border border-solid  border-blue rounded-br-lg"
                 style={{
                   width: windowSizes[name]?.width || 'auto',
                   height: windowSizes[name]?.height || 'auto',
