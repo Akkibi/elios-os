@@ -17,7 +17,7 @@ const Desktop = () => {
     gsap.fromTo("#" + name, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, {
       clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)', ease: 'power4.out', duration: 0.2, onComplete: () => {
         const updatedWindows = openWindows.filter(windowObj => windowObj.name !== name);
-        setOpenWindows(updatedWindows)
+        setOpenWindows(updatedWindows);
       }
     });
   };
