@@ -23,20 +23,22 @@ const LoginScreen = ({ onLogin }) => {
         <div  className="login-card relative  h-[65vh] w-[65vh] flex justify-center flex-col gap-4 items-center"> 
         <img className='animate-spin-slow-4 absolute w-full h-full' src="../img/login-bg-int.png" alt="" />
             <img className='w-[18vw] mb-[-2rem]'  src="img/logo-elios.png" alt="Elios" />
-            <form onSubmit={handleSubmit} className="relative px-[4rem] flex justify-start items-center w-[23vw] h-[10vh]">
-                    <div className=" bg-transparent z-10 drop-shadow-xl uppercase  w-full placeholder:text-blue text-blue text-xl font-mono focus:outline-none mt-[0.8rem]" >
-                       <input maxLength="5" className="absolute  top-[-1rem] tracking-[0.5vh] bg-transparent z-10 drop-shadow-xl uppercase  w-full text-blue text-xl focus:outline-none mt-[0.8rem]" type="text"
+            <form onSubmit={handleSubmit} className="img-input relative px-[4rem] flex justify-start items-center w-[23vw] h-[10vh]">
+                    <div className="flex justify-center bg-transparent z-10 drop-shadow-xl uppercase  w-full placeholder:text-blue text-blue text-xl font-mono focus:outline-none mt-[0.8rem]" >
+                       <input maxLength="5" className="absolute left-1/2 -translate-x-1/2  top-[-1rem] tracking-[0.5ch] bg-transparent z-10 drop-shadow-xl max-w-[7.5ch] uppercase text-blue text-xl focus:outline-none mt-[0.8rem]" type="text"
                        onChange={(e) => setPassword(e.target.value)}
                        value={password}
                        onKeyDown={handleKeyDown} 
                         />
-                       <p className='tracking-[0.5vh]'>_____</p>
+                        <div>
+                       <p className='tracking-[0.5ch]'>_____</p>
+                       </div>
                      
                 </div>
 
                 
           
-                <img className="absolute w-full h-full z-0 top-0 left-0" src="img/input-mdp.svg" alt="" />
+                <img className=" absolute w-full h-full z-0 top-0 left-0" src="img/input-mdp.svg" alt="" />
             </form>
       </div>
       </div>

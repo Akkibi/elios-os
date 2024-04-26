@@ -23,7 +23,7 @@ function App() {
     } else {
       console.log('Mot de passe incorrect');
       const tl = gsap.timeline();
-      tl.set('.error-red', {opacity: 1}).to('.error-red', {opacity: 0, duration: 1, ease: 'power2.out'});
+      tl.set('.error-red', {opacity: 1}).to('.error-red', {opacity: 0, duration: 1, ease: 'power2.out'}).to(".img-input", {x: 10, duration: 0.1, repeat: 5, yoyo: true, ease: 'power2.inOut'});
     }
   };
 
@@ -71,7 +71,7 @@ function App() {
       </svg>
       ): null}
         
-        <div className="Orbitron frame-top-infos absolute flex items-center gap-[1.8vw] left-[9vw] top-[1.5%] text-[1em] font-medium text-blue h-[1.2em]">
+        <div className="Orbitron frame-top-infos absolute flex items-center gap-[1vw] left-[8vw] top-[1.5%] text-[1em] font-medium text-blue h-[1.2em]">
           <p className="drop-shadow-sm">{getDate()}</p>
           <p className="drop-shadow-sm">Disk 12.5% full</p>
           <p className="drop-shadow-sm">Battery 100%</p>
