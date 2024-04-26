@@ -24,16 +24,22 @@ const LoginScreen = ({ onLogin }) => {
         <img className='animate-spin-slow-4 absolute w-full h-full' src="../img/login-bg-int.png" alt="" />
             <img className='w-[18vw] mb-[-2rem]'  src="img/logo-elios.png" alt="Elios" />
             <form onSubmit={handleSubmit} className="relative px-[4rem] flex justify-start items-center w-[23vw] h-[10vh]">
-                <input className="bg-transparent z-10 drop-shadow-xl uppercase  w-full placeholder:text-blue text-blue text-xl focus:outline-none mt-[0.8rem]" type="text"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onKeyDown={handleKeyDown} 
-                    placeholder="Mot de passe"/> 
+                    <div className=" bg-transparent z-10 drop-shadow-xl uppercase  w-full placeholder:text-blue text-blue text-xl font-mono focus:outline-none mt-[0.8rem]" >
+                       <input maxLength="5" className="absolute  top-[-1rem] tracking-[0.5vh] bg-transparent z-10 drop-shadow-xl uppercase  w-full text-blue text-xl focus:outline-none mt-[0.8rem]" type="text"
+                       onChange={(e) => setPassword(e.target.value)}
+                       value={password}
+                       onKeyDown={handleKeyDown} 
+                        />
+                       <p className='tracking-[0.5vh]'>_____</p>
+                     
+                </div>
+
+                
+          
                 <img className="absolute w-full h-full z-0 top-0 left-0" src="img/input-mdp.svg" alt="" />
             </form>
       </div>
       </div>
-     
     </div>
   );
 }
@@ -43,3 +49,6 @@ LoginScreen.propTypes = {
   };
 
 export default LoginScreen;
+
+
+
