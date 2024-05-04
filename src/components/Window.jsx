@@ -6,9 +6,9 @@ import Notepad from './Notepad';
 import Contacts from './Contacts';
 
 
-const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows }) => {
+const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows, fullWindow }) => {
 
-const [width, setWidth] = useState(250);
+const [width, setWidth] = useState(350);
 const [height, setHeight] = useState(250);
 const [position, setPosition] = useState({ x: window.innerWidth / 2 - 192, y: window.innerHeight / 2 - 192 });
 
@@ -28,12 +28,37 @@ const renderAppContent = (appName) => {
     };
     
 
-const handleResize = (name, e) => {
-    console.log("name", name, e);
-    setWidth( width + 10 );
-    setHeight( height + 10 );
-    console.log("width", width, "height", height)
+    const handleResize = (name, e) => {
+      let prevX = e.clientX;
+      let prevY = e.clientY;
+    
+      const mousemove = (e) => {
+        const diffX = e.clientX - prevX;
+        const diffY = e.clientY - prevY;
+    
+        // Ajustez la largeur et la hauteur en fonction de la direction du mouvement de la souris
+        setWidth(prevWidth => prevWidth + diffX);
+        setHeight(prevHeight => prevHeight + diffY);
+    
+        // Mettez à jour les positions précédentes de la souris
+        prevX = e.clientX;
+        prevY = e.clientY;
+      };
+    
+      const mouseup = () => {
+        // Supprimez les écouteurs d'événements lorsque l'utilisateur relâche le bouton de la souris
+        document.removeEventListener('mousemove', mousemove);
+        document.removeEventListener('mouseup', mouseup);
+      };
+    
+      // Ajoutez l'écouteur d'événement mousemove
+      document.addEventListener('mousemove', mousemove);
+    
+      // Ajoutez l'écouteur d'événement mouseup
+      document.addEventListener('mouseup', mouseup);
     };
+    
+    
 
 
 
@@ -56,9 +81,9 @@ const handleResize = (name, e) => {
       id={name}
       onClick={() => { bringWindowToTop(name) }}
     >
-      <div className='absolute bottom-0 right-0 flex m-1 justify-center items-center flex-row bg-midnight border border-solid border-blue rounded-full w-10 h-10 translate-x-1/2 translate-y-1/2 user-select-none' onMouseDown={(e) => handleResize(name, e)}>↘</div>
+      <div className='absolute bottom-0 right-0 flex m-1 justify-center items-center flex-row bg-midnight border border-solid border-blue rounded-full w-10 h-10 translate-x-1/2 translate-y-1/2 user-select-none cursor-se-resize' onMouseDown={(e) => handleResize(name, e)}>↘</div>
       <div className='absolute top-0 right-0 flex m-1 justify-center items-center flex-row'>
-        <span className=' cursor-pointer select-none  text-xl h-6 w-6 rounded-full  text-center leading-6 text-[#B7FFF2] ' > ▢</span>
+        {/* <span className=' cursor-pointer select-none  text-xl h-6 w-6 rounded-full  text-center leading-6 text-[#B7FFF2]  'onClick={() => fullWindow(name, this)} > ▢</span> */}
         <span className=' cursor-pointer select-none text-xl h-6 w-6 rounded-full  text-center leading-6 text-red ' onClick={() => closeWindow(name, this)}> X</span>
       </div>
       <div>
@@ -84,6 +109,7 @@ const handleResize = (name, e) => {
         ))}
         {type === 'app' && renderAppContent(content[0])}
         {type === 'image' && <img className="w-full h-full" src={content[0]} alt={name} />}
+        {type === 'video' && <video className="w-full h-fit rounded-xl border-4  border-solid  border-[#B7FFF2] border-opacity-20 " src={content[0]} alt={name} controls autoPlay />}
         {type === 'document' && <div className="w-full h-full">
           <h1>{content[0]}</h1>
           <p>{content[1]}</p><br />

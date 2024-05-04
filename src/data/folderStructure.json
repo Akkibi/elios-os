@@ -44,6 +44,46 @@
                 "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"
               ]
             },
+            
+            {
+              "name": "new folder",
+              "type": "folder",
+              "icon": "/icons/folder.svg",
+              "content": [
+                {
+                  "name": "cestmapref.png",
+                  "type": "image",
+                  "icon": "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png",
+                  "content": [
+                    "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Videos",
+          "type": "folder",
+          "icon": "/icons/folder.svg",
+          "content": [
+            {
+              "name": "video1.mp4",
+              "type": "video",
+              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "content": [
+                "/videos/bam.MP4"
+              ]
+            },
+            {
+              "name": "image2.jpg",
+              "type": "image",
+              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png",
+              "content": [
+                "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"
+              ]
+            },
+            
             {
               "name": "new folder",
               "type": "folder",

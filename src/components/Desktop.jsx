@@ -22,6 +22,14 @@ const Desktop = () => {
     });
   };
 
+  const fullWindow = (name) => {
+    gsap.fromTo("#" + name, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, {
+      clipPath: 'polygon(0 0, 100% 110, 100% 100%, 0 100%)', ease: 'power4.out', duration: 0.2, onComplete: () => {
+        const updatedWindows = openWindows.filter(windowObj => windowObj.name !== name);
+      }
+    })
+  };
+
   const bringWindowToTop = (name) => {
     console.log(openWindows.filter(windowObj => windowObj.name === name)[0].zIndex === openWindows.length, openWindows.filter(windowObj => windowObj.name === name)[0].zIndex);
     if(openWindows.filter(windowObj => windowObj.name === name).zIndex === openWindows.length) return;
@@ -53,7 +61,7 @@ const Desktop = () => {
 
         <section className='top-0 left-0 w-0 h-0 fixed' id="windows-container user-select-none">
           {openWindows.map((props, index) => (
-            <Window {...props} key={index} bringWindowToTop={bringWindowToTop} closeWindow={closeWindow} setNewWindow={setNewWindow} openWindows={openWindows} setOpenWindows={setOpenWindows} />
+            <Window {...props} key={index} bringWindowToTop={bringWindowToTop} closeWindow={closeWindow} fullWindow={fullWindow} setNewWindow={setNewWindow} openWindows={openWindows} setOpenWindows={setOpenWindows} />
           ))}
         </section>
     </>
