@@ -1,58 +1,115 @@
 {
-    "bureau": [
-      {
-        "name": "Files",
-        "type": "folder",
-        "content": [{
+  "bureau": [
+    {
+      "name": "Files",
+      "type": "folder",
+      "icon": "/icons/folder.svg",
+      "content": [
+        {
           "name": "Documents",
           "type": "folder",
-          "content": [{
-            "name": "document.pdf",
-            "type": "document",
-            "content": ["Qu'est-ce que le Lorem Ipsum?", "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,","quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.","Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker."]
-          }]
-        }, {
+          "icon": "/icons/folder.svg",
+          "content": [
+            {
+              "name": "document.pdf",
+              "type": "document",
+              "icon": "/icons/pdf.svg",
+              "content": [
+                "Qu'est-ce que le Lorem Ipsum?",
+                "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,",
+                "quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.",
+                "Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker."
+              ]
+            }
+          ]
+        },
+        {
           "name": "Pictures",
           "type": "folder",
-          "content": [{
-            "name": "image.png",
-            "type": "image",
-            "content": ["https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png"]
-          }, {
-            "name": "image2.jpg",
-            "type": "image",
-            "content": ["https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"]
-          }, {
-            "name": "new folder",
-            "type": "folder",
-            "content": [{
-              "name": "cestmapref.png",
+          "icon": "/icons/folder.svg",
+          "content": [
+            {
+              "name": "image.png",
               "type": "image",
-              "content": ["https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png"]
-            }]
-          }]
-        }]
-      },
-      {
-        "name": "Terminal",
-        "type": "app",
-        "content": ["terminal"]
-      },
-      {
-        "name": "Calculator",
-        "type": "app",
-        "content": ["calculator"]
-      },
-      {
-        "name": "Notepad",
-        "type": "app",
-        "content": ["notepad"]
-      },
-      {
-        "name": "contacts",
-        "type": "app",
-        "content": ["contacts"]
-      }
-    ]
-  }
-  
+              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "content": [
+                "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png"
+              ]
+            },
+            {
+              "name": "image2.jpg",
+              "type": "image",
+              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png",
+              "content": [
+                "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"
+              ]
+            },
+            
+            {
+              "name": "new folder",
+              "type": "folder",
+              "icon": "/icons/folder.svg",
+              "content": [
+                {
+                  "name": "cestmapref.png",
+                  "type": "image",
+                  "icon": "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png",
+                  "content": [
+                    "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Videos",
+          "type": "folder",
+          "icon": "/icons/folder.svg",
+          "content": [
+            {
+              "name": "video1.mp4",
+              "type": "video",
+              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "content": [
+                "/videos/bam.MP4"
+              ]
+            },
+            {
+              "name": "image2.jpg",
+              "type": "image",
+              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png",
+              "content": [
+                "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"
+              ]
+            },
+            
+            {
+              "name": "new folder",
+              "type": "folder",
+              "icon": "/icons/folder.svg",
+              "content": [
+                {
+                  "name": "cestmapref.png",
+                  "type": "image",
+                  "icon": "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png",
+                  "content": [
+                    "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Terminal",
+      "type": "app",
+      "icon": "/icons/terminal.svg",
+      "content": [
+        "terminal"
+      ]
+    }
+  ]
+}
