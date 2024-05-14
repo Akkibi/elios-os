@@ -110,30 +110,6 @@
       "content": [
         "terminal"
       ]
-    },
-    {
-      "name": "Calculator",
-      "type": "app",
-      "icon": "/icons/calculator.svg",
-      "content": [
-        "calculator"
-      ]
-    },
-    {
-      "name": "Notepad",
-      "type": "app",
-      "icon": "/icons/notepad.svg",
-      "content": [
-        "notepad"
-      ]
-    },
-    {
-      "name": "contacts",
-      "type": "app",
-      "icon": "/icons/contacts.svg",
-      "content": [
-        "contacts"
-      ]
     }
   ]
 }

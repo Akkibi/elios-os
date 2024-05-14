@@ -1,9 +1,7 @@
 import Draggable from 'react-draggable';
 import { useState } from 'react';
 import Terminal from './Terminal';
-import Calculator from './Calculator';
-import Notepad from './Notepad';
-import Contacts from './Contacts';
+
 
 
 const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows, fullWindow }) => {
@@ -16,12 +14,6 @@ const renderAppContent = (appName) => {
     switch (appName) {
         case 'terminal':
         return <Terminal />;
-        case 'calculator':
-        return <Calculator />;
-        case 'notepad':
-        return <Notepad />;
-        case 'contacts':
-        return <Contacts />;
         default:
         return null;
     }
@@ -63,7 +55,7 @@ const renderAppContent = (appName) => {
 
 
  return (
-    <Draggable handle=".handle"
+    <Draggable 
     onStart={() =>  bringWindowToTop(name) }
     defaultPosition={{ x: position.x, y: position.y }}
     scale={1}
@@ -108,9 +100,9 @@ const renderAppContent = (appName) => {
           </button>
         ))}
         {type === 'app' && renderAppContent(content[0])}
-        {type === 'image' && <img className="w-full h-full" src={content[0]} alt={name} />}
+        {type === 'image' && <img className="w-full h-fit" src={content[0]} alt={name} />}
         {type === 'video' && <video className="w-full h-fit rounded-xl border-4  border-solid  border-[#B7FFF2] border-opacity-20 " src={content[0]} alt={name} controls autoPlay />}
-        {type === 'document' && <div className="w-full h-full">
+        {type === 'document' && <div className="w-full h-fit">
           <h1>{content[0]}</h1>
           <p>{content[1]}</p><br />
           <p>{content[2]}</p><br />
