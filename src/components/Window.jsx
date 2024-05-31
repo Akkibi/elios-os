@@ -6,8 +6,8 @@ import Terminal from './Terminal';
 
 const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows, fullWindow }) => {
 
-const [width, setWidth] = useState(350);
-const [height, setHeight] = useState(250);
+const [width, setWidth] = useState(450);
+const [height, setHeight] = useState(450);
 const [position, setPosition] = useState({ x: window.innerWidth / 2 - 192, y: window.innerHeight / 2 - 192 });
 
 const renderAppContent = (appName) => {

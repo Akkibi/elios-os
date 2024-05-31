@@ -29,33 +29,25 @@
           "icon": "/icons/folder.svg",
           "content": [
             {
-              "name": "image.png",
+              "name": "ecole.png",
               "type": "image",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "icon": "img/ecole.jpeg",
               "content": [
                 "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png"
               ]
             },
-            {
-              "name": "image2.jpg",
-              "type": "image",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png",
-              "content": [
-                "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"
-              ]
-            },
             
             {
-              "name": "new folder",
+              "name": "anniversaire",
               "type": "folder",
               "icon": "/icons/folder.svg",
               "content": [
                 {
-                  "name": "cestmapref.png",
+                  "name": "jour1.png",
                   "type": "image",
-                  "icon": "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png",
+                  "icon": "img/euridis.jpeg",
                   "content": [
-                    "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png"
+                    "img/euridis.jpeg"
                   ]
                 }
               ]
@@ -68,59 +60,35 @@
           "icon": "/icons/folder.svg",
           "content": [
             {
-              "name": "2076.mp4",
+              "name": "entry-2076-1.mp4",
               "type": "video",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "icon": "img/v1.png",
               "content": [
                 "/videos/2076.mp4"
               ]
             },
             {
-              "name": "2077.mp4",
+              "name": "entry-2077-1.mp4",
               "type": "video",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "icon": "img/v2.png",
               "content": [
                 "/videos/2077.mp4"
               ]
             },
             {
-              "name": "2077-2.mp4",
+              "name": "entry-2077-2.mp4",
               "type": "video",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "icon": "img/v3.png",
               "content": [
                 "/videos/2077-2.mp4"
               ]
             },
             {
-              "name": "2078.mp4",
+              "name": "entry-2078-1.mp4",
               "type": "video",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png",
+              "icon": "img/v4.png",
               "content": [
                 "/videos/2078.mp4"
-              ]
-            },
-            {
-              "name": "image2.jpg",
-              "type": "image",
-              "icon": "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png",
-              "content": [
-                "https://www.techpowerup.com/review/cyberpunk-2077-benchmark-test-performance/images/small.png"
-              ]
-            },
-            
-            {
-              "name": "new folder",
-              "type": "folder",
-              "icon": "/icons/folder.svg",
-              "content": [
-                {
-                  "name": "cestmapref.png",
-                  "type": "image",
-                  "icon": "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png",
-                  "content": [
-                    "https://staticdelivery.nexusmods.com/mods/3333/images/thumbnails/3997/3997-1646274729-1047664581.png"
-                  ]
-                }
               ]
             }
           ]
