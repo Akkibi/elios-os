@@ -7,7 +7,7 @@ import Terminal from './Terminal';
 const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows, fullWindow }) => {
 
 const [width, setWidth] = useState(450);
-const [height, setHeight] = useState(450);
+const [height, setHeight] = useState(350);
 const [position, setPosition] = useState({ x: window.innerWidth / 2 - 192, y: window.innerHeight / 2 - 192 });
 
 const renderAppContent = (appName) => {
@@ -90,10 +90,10 @@ const renderAppContent = (appName) => {
 
         <div className='mt-5 w-full ml-2 h-0 border-b  border-b-solid  border-[#B7FFF2] border-opacity-20  '></div>
       </div>
-      <div className="w-full flex gap-3 p-5 relative flex-1  rounded-md h-full overflow-hidden"
+      <div className="w-full flex gap-3 px-5 pt-2 relative flex-1 flex-wrap rounded-md h-full overflow-hidden"
       >
         {type === 'folder' && content.map(item => (
-          <button key={item.name} onClick={() => setOpenWindows([...openWindows, { name: item.name, type: item.type, content: item.content }])} className="flex flex-col max-h-32 gap-2 justify-center items-center">
+          <button key={item.name} onClick={() => setOpenWindows([...openWindows, { name: item.name, type: item.type, content: item.content }])} className="flex flex-col max-h-32 min-w-32 gap-2 justify-center items-center">
             <div className="w-20 h-full min-h-16 bg-center bg-contain bg-no-repeat px-2" style={{ backgroundImage: `url(${item.icon})` }}>
             </div>
             <p className='text-center w-full uppercase font-urbanist tracking-[.1em] drop-shadow-txt'>{item.name}</p>

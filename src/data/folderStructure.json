@@ -13,7 +13,7 @@
             {
               "name": "document.pdf",
               "type": "document",
-              "icon": "/icons/pdf.svg",
+              "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Generic_File_OneDrive_icon.svg/1200px-Generic_File_OneDrive_icon.svg.png",
               "content": [
                 "Qu'est-ce que le Lorem Ipsum?",
                 "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,",
@@ -33,7 +33,7 @@
               "type": "image",
               "icon": "img/ecole.jpeg",
               "content": [
-                "https://www.techpowerup.com/review/cyberpunk-2077-phantom-liberty-benchmark-test-performance-analysis/images/small.png"
+                "img/ecole.jpeg"
               ]
             },
             
@@ -43,7 +43,7 @@
               "icon": "/icons/folder.svg",
               "content": [
                 {
-                  "name": "jour1.png",
+                  "name": "11ans.png",
                   "type": "image",
                   "icon": "img/euridis.jpeg",
                   "content": [
