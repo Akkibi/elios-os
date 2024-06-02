@@ -12,7 +12,7 @@
           "content": [
             {
               "name": "document.pdf",
-              "type": "document",
+              "type": "app",
               "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Generic_File_OneDrive_icon.svg/1200px-Generic_File_OneDrive_icon.svg.png",
               "content": [
                 "Qu'est-ce que le Lorem Ipsum?",
@@ -43,7 +43,7 @@
               "icon": "/icons/folder.svg",
               "content": [
                 {
-                  "name": "11ans.png",
+                  "name": "onze-ans.png",
                   "type": "image",
                   "icon": "img/euridis.jpeg",
                   "content": [
