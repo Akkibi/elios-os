@@ -8,9 +8,36 @@ const Desktop = () => {
   const [openWindows, setOpenWindows] = useState([]);
 
   const setNewWindow = (name, type, content) => {
+    // find highestZIndex in openWindows
     if (!openWindows.find(windowObj => windowObj.name === name)) {
-      setOpenWindows([...openWindows, {name: name, type: type, zIndex: openWindows.length, content: content}]);
+      setOpenWindows([...openWindows, {name: name, type: type, zIndex: findHighestZIndex() + 1, content: content, position: { x: window.innerWidth / 4 + openWindows.length * 20, y: window.innerHeight / 4 + openWindows.length * 20 }, size: { width: 450, height: 350}}]);
     }
+  }
+
+  const findHighestZIndex = () => {
+    console.log("zindex",openWindows.reduce((acc, windowObj) => windowObj.zIndex > acc ? windowObj.zIndex : acc, 0));
+    return (openWindows.reduce((acc, windowObj) => windowObj.zIndex > acc ? windowObj.zIndex : acc, 0));
+  }
+
+  const setSize = (name, size) => {
+    const updatedWindows = openWindows.map(windowObj => {
+      if (windowObj.name === name) {
+        return { ...windowObj, size: size };
+      } else {
+        return windowObj;
+      }
+    });
+    setOpenWindows(updatedWindows);
+  }
+  const setPosition = (name, position) => {
+    const updatedWindows = openWindows.map(windowObj => {
+      if (windowObj.name === name) {
+        return { ...windowObj, position: position };
+      } else {
+        return windowObj;
+      }
+    });
+    setOpenWindows(updatedWindows);
   }
 
   const closeWindow = (name) => {
@@ -22,28 +49,18 @@ const Desktop = () => {
     });
   };
 
-  const fullWindow = (name) => {
-    gsap.fromTo("#" + name, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, {
-      clipPath: 'polygon(0 0, 100% 110, 100% 100%, 0 100%)', ease: 'power4.out', duration: 0.2, onComplete: () => {
-        const updatedWindows = openWindows.filter(windowObj => windowObj.name !== name);
-      }
-    })
-  };
-
   const bringWindowToTop = (name) => {
-    console.log(openWindows.filter(windowObj => windowObj.name === name)[0].zIndex === openWindows.length, openWindows.filter(windowObj => windowObj.name === name)[0].zIndex);
-    if(openWindows.filter(windowObj => windowObj.name === name).zIndex === openWindows.length) return;
-    // openWindows.map(windowObj => {
-    //   if (windowObj.name === name) {
-    //     windowObj.zIndex = openWindows.length;
-    //   } else {
-    //     windowObj.zIndex --;
-    //   }
-    // })
-    // if (openWindows[openWindows.length-1].name !== name) {
-    //   const updatedWindows = openWindows.filter(windowObj => windowObj.name !== name);
-    //   setOpenWindows([...updatedWindows, openWindows.find(windowObj => windowObj.name === name)]);
-    // }
+    //if highest zIndex is already the highest, return
+    if (openWindows.find(windowObj => windowObj.name === name).zIndex === findHighestZIndex()) return;
+    console.log('bringWindowToTop', name);
+    const updatedWindows = openWindows.map(windowObj => {
+      if (windowObj.name === name) {
+        return { ...windowObj, zIndex: findHighestZIndex() + 1 };
+      } else {
+        return windowObj;
+      }
+    });
+    setOpenWindows(updatedWindows);  
   };
 
   return (
@@ -61,7 +78,7 @@ const Desktop = () => {
 
         <section className='top-0 left-0 w-0 h-0 fixed' id="windows-container user-select-none">
           {openWindows.map((props, index) => (
-            <Window {...props} key={index} bringWindowToTop={bringWindowToTop} closeWindow={closeWindow} fullWindow={fullWindow} setNewWindow={setNewWindow} openWindows={openWindows} setOpenWindows={setOpenWindows} />
+            <Window {...props} key={index} bringWindowToTop={bringWindowToTop} closeWindow={closeWindow} setNewWindow={setNewWindow} setPosition={setPosition} setSize={setSize} />
           ))}
         </section>
     </>
