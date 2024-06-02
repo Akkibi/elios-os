@@ -4,7 +4,7 @@ import Terminal from './Terminal';
 
 
 
-const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows, fullWindow }) => {
+const Window = ({name, type, content, zIndex, bringWindowToTop, closeWindow, setOpenWindows, openWindows}) => {
 
 const [width, setWidth] = useState(450);
 const [height, setHeight] = useState(350);
