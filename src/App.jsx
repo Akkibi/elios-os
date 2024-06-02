@@ -14,7 +14,7 @@ const getDate = () => {
 
 function App() {
   // // const [currentDate, setCurrentDate] = useState(getDate());
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = (password) => {
     // Vérifiez le mot de passe ici
