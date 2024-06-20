@@ -10,7 +10,7 @@ const Desktop = () => {
   const setNewWindow = (name, type, content) => {
     // find highestZIndex in openWindows
     if (!openWindows.find(windowObj => windowObj.name === name)) {
-      setOpenWindows([...openWindows, {name: name, type: type, zIndex: findHighestZIndex() + 1, content: content, position: { x: window.innerWidth / 4 + openWindows.length * 20, y: window.innerHeight / 4 + openWindows.length * 20 }, size: { width: 450, height: 350}}]);
+      setOpenWindows([...openWindows, {name: name, type: type, zIndex: findHighestZIndex() + 1, content: content, position: { x: window.innerWidth / 4 + openWindows.length * 20, y: window.innerHeight / 4 + openWindows.length * 20 }, size: { width: 600, height: 450}}]);
     }
   }
 

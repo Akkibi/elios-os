@@ -53,7 +53,6 @@ const renderAppContent = () => {
     handle='.handle'
     key={name}
     onStop={(e) => {
-        console.log(name,position.x,position.y)
         setPosition(name, { x: e.x, y: e.y });
     }}
   >
